@@ -11,22 +11,13 @@
 template <class T>
 TListSystem::TList<T>::TList()
 {
-    firstNode = nullptr;
-    lastNode  = nullptr;
-    selectedNode = nullptr;
-    m_size = 0;
+    InitNodes();
 }
 
 template <class T>
 TListSystem::TList<T>::~TList()
 {
-    delete firstNode;
-    delete lastNode;
-    delete selectedNode;
-    
-    firstNode = nullptr;
-    lastNode  = nullptr;
-    selectedNode = nullptr;
+    DeleteNodes();
 }
 
 template <class T>
@@ -39,7 +30,7 @@ template <class T>
 unsigned int TListSystem::TList<T>::Push(T psz)
 {
     TNode *node;
-    node = TListSystem::TList<T>::Node();
+    node = new TNode();
     node->tlistData = psz;
     
     if(!lastNode)
@@ -86,15 +77,11 @@ const T TListSystem::TList<T>::Pop()
 {
     if (m_size == 0)
     {
-        firstNode = nullptr;
-        lastNode  = nullptr;
-        selectedNode = nullptr;
+        DeleteNodes();
     }
     else if (m_size == 1)
     {
-        firstNode = nullptr;
-        lastNode  = nullptr;
-        selectedNode = nullptr;
+        DeleteNodes();
         m_size --;
     }
     else
@@ -105,7 +92,7 @@ const T TListSystem::TList<T>::Pop()
     
     if (!lastNode)
     {
-        return 0;
+        return NULL;
     }
     else
     {
@@ -120,4 +107,25 @@ void TListSystem::TList<T>::Reset()
     {
         Pop();
     }
+}
+
+template <class T>
+void TListSystem::TList<T>::InitNodes()
+{
+    firstNode = nullptr;
+    lastNode  = nullptr;
+    selectedNode = nullptr;
+    m_size = 0;
+}
+
+template <class T>
+void TListSystem::TList<T>::DeleteNodes()
+{
+    firstNode = nullptr;
+    lastNode  = nullptr;
+    selectedNode = nullptr;
+    
+    delete firstNode;
+    delete lastNode;
+    delete selectedNode;
 }

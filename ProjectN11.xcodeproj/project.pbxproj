@@ -45,7 +45,7 @@
 		1390290021A9A045006ADDFB /* FileUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileUtils.cpp; sourceTree = "<group>"; };
 		1390290121A9A045006ADDFB /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
 		1390290421A9A06E006ADDFB /* TList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TList.hpp; sourceTree = "<group>"; };
-		1390290521A9A06E006ADDFB /* TList.tpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TList.tpp; sourceTree = "<group>"; };
+		1390290521A9A06E006ADDFB /* TList.tpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TList.tpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		13F1824221A2495500656833 /* ProjectN11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectN11; sourceTree = BUILT_PRODUCTS_DIR; };
 		13F1824521A2495500656833 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */

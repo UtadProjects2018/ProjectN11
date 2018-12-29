@@ -20,17 +20,23 @@ int main(int argc, const char * argv[])
     
     for (int i = 0; i < numberFromFile.Size() ; i++)
     {
-        if (i == 0)
-        {
-            printf("TList Value %d\n", numberFromFile.First());
-        }
-        else
-        {
-            printf("TList Value %d\n", numberFromFile.Next());
-        }
+        printf("TList Value %d\n", i == 0 ? numberFromFile.First() : numberFromFile.Next());
     }
     
     numberFromFile.Reset();
+    
+    /*
+     Logs
+     File was read success!
+     Read: 1,2,3,4,5,6
+     
+     TList Value 1
+     TList Value 2
+     TList Value 3
+     TList Value 4
+     TList Value 5
+     TList Value 6
+     */
     
     return 0;
 }
